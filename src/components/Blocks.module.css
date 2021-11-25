@@ -1,6 +1,22 @@
 .blocks{
     background-color: rgba(0, 0, 0, 0.877);
-    display: grid;
-    height: 100vh;
+    height: 1000vh;
+    width: 100%;
     color: white;
 }
+
+.layout{
+    background-color: blue;
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+}
+
+.chartContainer{
+    height: 100%;
+    width: 100%;
+} 
