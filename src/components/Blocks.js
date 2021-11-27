@@ -2,8 +2,9 @@ import { Responsive, WidthProvider } from 'react-grid-layout';
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 import styles from './Blocks.module.css';
+import FilterComponent from './FilterComponent'
 
-const ResponsiveGridLayout = WidthProvider(Responsive);
+const ResponsiveGridLayout = WidthProvider( Responsive );
 
 const options1 = {
     title: {
@@ -46,10 +47,7 @@ const options4 = {
     }]
 }
 
-
 const Blocks = (props) => {
-
-    
     const layout1 = [
         { i: "1", x: 0, y: 0, w: 8, h: 8 },
         { i: "2", x: 4, y: 0, w: 8, h: 8 },
@@ -57,24 +55,8 @@ const Blocks = (props) => {
         { i: "4", x: 4, y: 8, w: 8, h: 8 },
         { i: "5", x: 4, y: 8, w: 8, h: 8 },
     ]
-
-    // const layout2 = [
-    //     { i: "1", x: 0, y: 0, w: 2, h: 1, minW:2, minH:2, maxW:6, maxH:6 },
-    //     { i: "2", x: 5, y: 0, w: 2, h: 1, minW:2, minH:2, maxW:6, maxH:6 },
-    //     { i: "3", x: 8, y: 0, w: 3, h: 2, minW:2, minH:2, maxW:6, maxH:6 },
-    //     { i: "4", x: 0, y: 3, w: 5, h: 2, minW:2, minH:2, maxW:6, maxH:6 },
-    // ]
-
-    // const layout3 = [
-    //     { i: "1", x: 0, y: 0, w: 10, h: 20, minW:2, minH:2, maxW:6, maxH:6  },
-    //     { i: "2", x: 0, y: 20, w: 10, h: 20, minW:2, minH:2, maxW:6, maxH:6 },
-    //     { i: "3", x: 0, y: 40, w: 10, h: 20, minW:2, minH:2, maxW:6, maxH:6 },
-    //     { i: "4", x: 0, y: 60, w: 10, h: 20, minW:2, minH:2, maxW:6, maxH:6 },
-    // ]
-
-    // var layouts = {lg: layout1, md: layout2, sm: layout3}
     let chart1, chart2, chart3, chart4
-    
+ 
     return (
         <div className={styles.blocks}>
             <ResponsiveGridLayout 
@@ -104,20 +86,21 @@ const Blocks = (props) => {
                         options = { options1 }
                         callback = { chart =>  {chart1 = chart}}
                     />
+                    <FilterComponent />
                 </div>
                 <div 
                     className={styles.container} 
                     key="2"
                     >   
-                                 
                     <HighchartsReact 
                         containerProps = {{ className: styles.chartContainer }}
                         highcharts={Highcharts} 
                         options={options2}
                         callback = { chart =>  {chart2 = chart}}
                     />
+                    <FilterComponent />
                 </div>
-                <div 
+                <div
                     className={styles.container} 
                     key="3"
                     >                
@@ -127,6 +110,7 @@ const Blocks = (props) => {
                         options={options3}
                         callback = { chart =>  {chart3 = chart}}
                     />
+                    <FilterComponent />
                 </div>
                 <div 
                     className={styles.container} 
@@ -138,6 +122,7 @@ const Blocks = (props) => {
                         options={options4}
                         callback = { chart =>  {chart4 = chart}}
                     />
+                    <FilterComponent />
                 </div>
             </ResponsiveGridLayout>
         </div>

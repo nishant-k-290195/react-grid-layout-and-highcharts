@@ -1,0 +1,15 @@
+.title{
+    display: grid;
+    grid-template-columns: min-content max-content;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+.categories{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: start;
+    padding: 0;
+    margin-left: 2rem;
+    row-gap: 1rem;
+}

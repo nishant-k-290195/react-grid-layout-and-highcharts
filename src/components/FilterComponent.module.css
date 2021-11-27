@@ -1,0 +1,21 @@
+p{
+    padding: 0;
+    margin: 0;
+}
+.title button{
+    border: none;
+    background-color: white;
+}
+
+.title button:hover{
+    color: green;
+    border-bottom: 2.5px green solid;
+}
+
+.wrapper{
+    display: grid; 
+    grid-template-columns: min-content max-content;
+    align-items: center;
+    column-gap: 2rem;
+}
+
