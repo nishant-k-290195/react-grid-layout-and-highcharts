@@ -10,7 +10,7 @@ const options1 = {
     title: {
         useHTML: true,
         useJSX: true,
-        text: `<div>This is </div>`,
+        text: `My chart 1`,
     },
     series: [{
         type:'bar',
