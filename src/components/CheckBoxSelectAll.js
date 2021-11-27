@@ -4,7 +4,6 @@ import styles from './CheckBox.module.css'
 const CheckBoxSelectAll = (props) => {
     const onChange = event => {
         props.checkStatusAll(event.target.checked)
-        console.log('all', event.target.checked)
     }
     
     return (

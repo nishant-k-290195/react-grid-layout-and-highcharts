@@ -6,12 +6,13 @@ const CheckBox = (props) => {
     const [checkState, setCheckState] = useState(false)
 
     const onChange = event => {
-        if(event.target.checked ){setCheckState(false)}
+        setCheckState(event.target.checked)
+        console.log(event.target.value)
     }
     
     return (
         <div className={styles.checkBox}>
-            <input type="checkbox" onChange={onChange} name={props.name} value={props.value} />
+            <input type="checkbox" onChange={onChange} name={props.name} value={props.value} checked={props.checkStateAll || checkState} />
             <label htmlFor={props.name}>{props.label}</label>
         </div>
     )

@@ -3,8 +3,15 @@ import { BsArrowDownRightCircleFill } from 'react-icons/bs'
 import CheckBox  from './CheckBox';
 import CheckBoxSelectAll  from './CheckBoxSelectAll';
 import styles from './Categories.module.css'
+import { useState } from 'react'
 
 const Categories = () => {
+    const [checkStateAll, setCheckStateAll] = useState(false)
+
+    const checkStatusAll = (checked) => {
+        setCheckStateAll(checked)
+    }
+
     return (
         <div>
             <div className={styles.title}>
@@ -12,12 +19,12 @@ const Categories = () => {
                 <span>Categories</span>
             </div>
             <div className={styles.categories}>
-                <CheckBoxSelectAll name='selectAll' value='selectAll' label='(Select All)' />
-                <CheckBox name='2021' value='2021' label={`Hyundai`} />
-                <CheckBox name='2020' value='2020' label={`Lexus`} />
-                <CheckBox name='2019' value='2019' label={`Toyta`} />
-                <CheckBox name='2019' value='2019' label={`GM`} />
-                <CheckBox name='2019' value='2019' label={`Ford`} />
+                <CheckBoxSelectAll name='selectAll' value='selectAll' label='(Select All)' checkStatusAll={checkStatusAll} />
+                <CheckBox name='2021' value='Hyundai' label={`Hyundai`} checkStateAll={checkStateAll} />
+                <CheckBox name='2020' value='Lexus' label={`Lexus`} checkStateAll={checkStateAll} />
+                <CheckBox name='2019' value='Toyta' label={`Toyta`} checkStateAll={checkStateAll} />
+                <CheckBox name='2019' value='GM' label={`GM`} checkStateAll={checkStateAll} />
+                <CheckBox name='2019' value='Ford' label={`Ford`} checkStateAll={checkStateAll} />
             </div>
         </div>
     )

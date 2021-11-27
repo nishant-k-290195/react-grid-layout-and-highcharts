@@ -7,18 +7,9 @@ import { useState } from 'react'
 
 const Series = () => {
     const [checkStateAll, setCheckStateAll] = useState(false)
-    const [checkState, setCheckState] = useState(false)
 
     const checkStatusAll = (checked) => {
         setCheckStateAll(checked)
-
-    }
-
-    console.log('checkStateAll', checkStateAll)
-
-    const checkStatus = (checked) => {
-        setCheckState(checked)
-        console.log(checkState)
     }
 
     return (
@@ -30,9 +21,9 @@ const Series = () => {
 
             <div className={styles.series}>
                 <CheckBoxSelectAll name='selectAll' value='selectAll' label='(Select All)' checkStatusAll={checkStatusAll}/>
-                <CheckBoxBar name='2021' value='2021' label={`2021`} labelColor='blue' checkStatus={checkStatus} checkStateAll={checkStateAll}/>
-                <CheckBoxBar name='2020' value='2020' label={`2020`} labelColor='orange' checkStatus={checkStatus} checkStateAll={checkStateAll}/>
-                <CheckBoxBar name='2019' value='2019' label={`2019`} labelColor='grey' checkStatus={checkStatus} checkStateAll={checkStateAll}/>
+                <CheckBoxBar name='2021' value='2021' label={`2021`} labelColor='blue'  checkStateAll={checkStateAll}/>
+                <CheckBoxBar name='2020' value='2020' label={`2020`} labelColor='orange' checkStateAll={checkStateAll}/>
+                <CheckBoxBar name='2019' value='2019' label={`2019`} labelColor='grey'  checkStateAll={checkStateAll}/>
             </div>
         </div>
     )

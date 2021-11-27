@@ -7,9 +7,8 @@ const CheckBoxBar = (props) => {
 
     const onChange = event => {
         setCheckState(event.target.checked)
-        props.checkStatus(event.target.checked || props.checkStateAll)
+        console.log(event.target.value)
     }
-    // setCheckState(props.checkStateAll)
 
     return (
         <div className={styles.checkBoxBar}>
