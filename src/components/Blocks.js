@@ -8,7 +8,9 @@ const ResponsiveGridLayout = WidthProvider( Responsive );
 
 const options1 = {
     title: {
-        text: 'My chart 1'
+        useHTML: true,
+        useJSX: true,
+        text: `<div>This is </div>`,
     },
     series: [{
         type:'bar',

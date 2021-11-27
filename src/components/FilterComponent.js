@@ -39,7 +39,7 @@ const FilterComponent = () => {
                 content={content} 
                 trigger="click"
             >
-                <FaFilter style={{color:'yellow', fontSize: '2.5rem', marginLeft: '.5rem'}}/>
+                <FaFilter style={{color:'purple', fontSize: '2.5rem', margin: '1rem'}}/>
             </Popover>
         </div>
     )
